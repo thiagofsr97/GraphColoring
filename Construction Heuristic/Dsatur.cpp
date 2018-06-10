@@ -4,37 +4,39 @@
 
 #include <iostream>
 #include "Dsatur.h"
-class Compare
-{
-public:
-    bool operator() (Node* a, Node* b)
+
+    bool compare (Node* a, Node* b)
     {
         if(a->getDegreeSat() == b->getDegreeSat()){
-            return a->getNeighbors().size() > b->getNeighbors().size();
+//            if(a->getNeighbors().size() == b->getNeighbors().size()){
+//                return a->getIdentifier() > b->getIdentifier();
+//            }
+            return a->getNeighbors().size() <= b->getNeighbors().size();
         }
 
-        return a->getDegreeSat() > b->getDegreeSat();
+        return a->getDegreeSat() < b->getDegreeSat();
     }
-};
+
 
 void Dsatur::ColorGraph() {
     Node* current;
-    std::priority_queue<Node*,std::vector<Node*>,Compare> nodes;
-    nodes.push(graph->sortByMaxDegreeNode());
+    std::vector<Node*> nodes = graph->getAllNodes();
+    //std::priority_queue<Node*,std::vector<Node*>,Compare> nodes;
+    std::sort(nodes.begin(),nodes.end(),compare);
 
     while(!nodes.empty()){
-        current = nodes.top();
-        nodes.pop();
+        current = nodes.back();
+        nodes.erase(nodes.end()-1);
         if(!current->beenVisited()) {
             assignColor(current);
             current->switchState();
             for (auto neighbor:current->getNeighbors()) {
                 if(!neighbor->beenVisited()) {
                     neighbor->incrementDegreeSat();
-                    nodes.push(neighbor);
                 }
             }
         }
+        std::sort(nodes.begin(),nodes.end(),compare);
 
     }
 
@@ -64,4 +66,8 @@ void Dsatur::assignColor(Node *node) {
     if(color > number_of_colors_used)
         number_of_colors_used = color;
 
+}
+
+int Dsatur::getNumberOfColors() {
+    return this->number_of_colors_used;
 }

@@ -18,6 +18,7 @@ private:
 
 public:
     Dsatur(Graph *graph);
+    int getNumberOfColors();
     void ColorGraph();
 
 };

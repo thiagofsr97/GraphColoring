@@ -6,7 +6,7 @@
 #include "Graph.h"
 
 bool compFunction(Node* a, Node* b){
-    return a->getNeighbors().size() > b->getNeighbors().size();
+    return a->getNeighbors().size() >= b->getNeighbors().size();
 }
 
 void Graph::addNode(Node *node) {
@@ -92,7 +92,8 @@ void Graph::showMatrix(){
 void Graph::showNeighbors() {
 
     for(auto u:nodes){
-        std::cout << "Neighbors of " << u->getIdentifier()+1 << " :";
+        std::cout << "Neighbors of " << u->getIdentifier()+1 << " : Size " << u->getNeighbors().size() << std::endl;
+        //std::cout << "Number of neighbors "<< u->getIdentifier()+1 << ": "<<u->getNeighbors().size() << std::endl;
         for(auto v:nodes.at(u->getIdentifier())->getNeighbors()){
             std::cout << v->getIdentifier()+1 << " ";
 
