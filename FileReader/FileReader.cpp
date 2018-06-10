@@ -28,7 +28,9 @@ Graph *FileReader::createGraph() {
     int j = 0;
     int matrixSize = 0;
     int node_1,node_2;
+    int greatest_number_of_neighbors = 1;
     std::string line,numbers;
+    int current = 1;
 
     getline(*inputFile,line);
     std::stringstream ss(line);
@@ -45,13 +47,13 @@ Graph *FileReader::createGraph() {
         graph->addNode(new Node(i));
 
 
-
     while(!inputFile->eof()){
       getline(*inputFile,line);
       if(!line.empty()){
           std::stringstream ss{line};
 
           while(ss >> mark >> node_1 >> node_2 );
+
           graph->setWeightMatrix(node_1-1,node_2-1,1);
           graph->getNode((unsigned int)node_1-1)->addNeighbor(graph->getNode((unsigned int)node_2-1));
           graph->getNode((unsigned int)node_2-1)->addNeighbor(graph->getNode((unsigned int)node_1-1));

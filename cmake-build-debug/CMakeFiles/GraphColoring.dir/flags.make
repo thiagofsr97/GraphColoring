@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -std=gnu++11
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/thiagofsr/CLionProjects/GraphColoring/FileReader -I/home/thiagofsr/CLionProjects/GraphColoring/Graph -I/home/thiagofsr/CLionProjects/GraphColoring/Node 
+CXX_INCLUDES = -I"/home/thiagofsr/CLionProjects/GraphColoring/Construction Heuristic" -I/home/thiagofsr/CLionProjects/GraphColoring/FileReader -I/home/thiagofsr/CLionProjects/GraphColoring/Graph -I/home/thiagofsr/CLionProjects/GraphColoring/Node 
 

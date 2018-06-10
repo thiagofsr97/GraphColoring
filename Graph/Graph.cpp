@@ -5,6 +5,10 @@
 #include <iostream>
 #include "Graph.h"
 
+bool compFunction(Node* a, Node* b){
+    return a->getNeighbors().size() > b->getNeighbors().size();
+}
+
 void Graph::addNode(Node *node) {
     nodes.push_back(node);
 }
@@ -60,6 +64,7 @@ void Graph::addWeightMatrix(int i, int weight){
 Graph::Graph(int matrixSize, int arraySize) {
     this->matrixSize = matrixSize;
     this->array = new int[arraySize]();
+    this->maxDegree = nullptr;
 
 }
 
@@ -96,6 +101,15 @@ void Graph::showNeighbors() {
     }
 
 }
+
+Node* Graph::sortByMaxDegreeNode(){
+    std::vector<Node*> cp = nodes;
+    std::sort(cp.begin(),cp.end(),compFunction);
+
+    return cp[0];
+}
+
+
 
 
 

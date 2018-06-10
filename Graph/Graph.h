@@ -9,11 +9,13 @@
 #include <vector>
 #include <array>
 #include "../Node/Node.h"
+#include <algorithm>
 class Graph {
 private:
     std::vector<Node*> nodes;
     int *array;
     int matrixSize;
+    Node* maxDegree;
     int GetIndex(int u, int v);
 public:
     Graph(int matrixSize,int arraySize);
@@ -24,6 +26,7 @@ public:
     void setWeightMatrix( int u, int v,int weight);
     void addWeightMatrix(int i,int weight);
     int getWeigth(int u , int v);
+    Node* sortByMaxDegreeNode();
     void showMatrix();
     void showNeighbors();
 

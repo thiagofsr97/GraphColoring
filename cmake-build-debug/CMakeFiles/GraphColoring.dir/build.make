@@ -57,9 +57,33 @@ include CMakeFiles/GraphColoring.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/GraphColoring.dir/flags.make
 
+CMakeFiles/GraphColoring.dir/Construction_Heuristic/Dsatur.cpp.o: CMakeFiles/GraphColoring.dir/flags.make
+CMakeFiles/GraphColoring.dir/Construction_Heuristic/Dsatur.cpp.o: ../Construction\ Heuristic/Dsatur.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/thiagofsr/CLionProjects/GraphColoring/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/GraphColoring.dir/Construction_Heuristic/Dsatur.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GraphColoring.dir/Construction_Heuristic/Dsatur.cpp.o -c "/home/thiagofsr/CLionProjects/GraphColoring/Construction Heuristic/Dsatur.cpp"
+
+CMakeFiles/GraphColoring.dir/Construction_Heuristic/Dsatur.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GraphColoring.dir/Construction_Heuristic/Dsatur.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/thiagofsr/CLionProjects/GraphColoring/Construction Heuristic/Dsatur.cpp" > CMakeFiles/GraphColoring.dir/Construction_Heuristic/Dsatur.cpp.i
+
+CMakeFiles/GraphColoring.dir/Construction_Heuristic/Dsatur.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GraphColoring.dir/Construction_Heuristic/Dsatur.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/thiagofsr/CLionProjects/GraphColoring/Construction Heuristic/Dsatur.cpp" -o CMakeFiles/GraphColoring.dir/Construction_Heuristic/Dsatur.cpp.s
+
+CMakeFiles/GraphColoring.dir/Construction_Heuristic/Dsatur.cpp.o.requires:
+
+.PHONY : CMakeFiles/GraphColoring.dir/Construction_Heuristic/Dsatur.cpp.o.requires
+
+CMakeFiles/GraphColoring.dir/Construction_Heuristic/Dsatur.cpp.o.provides: CMakeFiles/GraphColoring.dir/Construction_Heuristic/Dsatur.cpp.o.requires
+	$(MAKE) -f CMakeFiles/GraphColoring.dir/build.make CMakeFiles/GraphColoring.dir/Construction_Heuristic/Dsatur.cpp.o.provides.build
+.PHONY : CMakeFiles/GraphColoring.dir/Construction_Heuristic/Dsatur.cpp.o.provides
+
+CMakeFiles/GraphColoring.dir/Construction_Heuristic/Dsatur.cpp.o.provides.build: CMakeFiles/GraphColoring.dir/Construction_Heuristic/Dsatur.cpp.o
+
+
 CMakeFiles/GraphColoring.dir/FileReader/FileReader.cpp.o: CMakeFiles/GraphColoring.dir/flags.make
 CMakeFiles/GraphColoring.dir/FileReader/FileReader.cpp.o: ../FileReader/FileReader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/thiagofsr/CLionProjects/GraphColoring/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/GraphColoring.dir/FileReader/FileReader.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/thiagofsr/CLionProjects/GraphColoring/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/GraphColoring.dir/FileReader/FileReader.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GraphColoring.dir/FileReader/FileReader.cpp.o -c /home/thiagofsr/CLionProjects/GraphColoring/FileReader/FileReader.cpp
 
 CMakeFiles/GraphColoring.dir/FileReader/FileReader.cpp.i: cmake_force
@@ -83,7 +107,7 @@ CMakeFiles/GraphColoring.dir/FileReader/FileReader.cpp.o.provides.build: CMakeFi
 
 CMakeFiles/GraphColoring.dir/Graph/Graph.cpp.o: CMakeFiles/GraphColoring.dir/flags.make
 CMakeFiles/GraphColoring.dir/Graph/Graph.cpp.o: ../Graph/Graph.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/thiagofsr/CLionProjects/GraphColoring/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/GraphColoring.dir/Graph/Graph.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/thiagofsr/CLionProjects/GraphColoring/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/GraphColoring.dir/Graph/Graph.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GraphColoring.dir/Graph/Graph.cpp.o -c /home/thiagofsr/CLionProjects/GraphColoring/Graph/Graph.cpp
 
 CMakeFiles/GraphColoring.dir/Graph/Graph.cpp.i: cmake_force
@@ -107,7 +131,7 @@ CMakeFiles/GraphColoring.dir/Graph/Graph.cpp.o.provides.build: CMakeFiles/GraphC
 
 CMakeFiles/GraphColoring.dir/Node/Node.cpp.o: CMakeFiles/GraphColoring.dir/flags.make
 CMakeFiles/GraphColoring.dir/Node/Node.cpp.o: ../Node/Node.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/thiagofsr/CLionProjects/GraphColoring/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/GraphColoring.dir/Node/Node.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/thiagofsr/CLionProjects/GraphColoring/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/GraphColoring.dir/Node/Node.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GraphColoring.dir/Node/Node.cpp.o -c /home/thiagofsr/CLionProjects/GraphColoring/Node/Node.cpp
 
 CMakeFiles/GraphColoring.dir/Node/Node.cpp.i: cmake_force
@@ -131,7 +155,7 @@ CMakeFiles/GraphColoring.dir/Node/Node.cpp.o.provides.build: CMakeFiles/GraphCol
 
 CMakeFiles/GraphColoring.dir/main.cpp.o: CMakeFiles/GraphColoring.dir/flags.make
 CMakeFiles/GraphColoring.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/thiagofsr/CLionProjects/GraphColoring/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/GraphColoring.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/thiagofsr/CLionProjects/GraphColoring/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/GraphColoring.dir/main.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GraphColoring.dir/main.cpp.o -c /home/thiagofsr/CLionProjects/GraphColoring/main.cpp
 
 CMakeFiles/GraphColoring.dir/main.cpp.i: cmake_force
@@ -155,6 +179,7 @@ CMakeFiles/GraphColoring.dir/main.cpp.o.provides.build: CMakeFiles/GraphColoring
 
 # Object files for target GraphColoring
 GraphColoring_OBJECTS = \
+"CMakeFiles/GraphColoring.dir/Construction_Heuristic/Dsatur.cpp.o" \
 "CMakeFiles/GraphColoring.dir/FileReader/FileReader.cpp.o" \
 "CMakeFiles/GraphColoring.dir/Graph/Graph.cpp.o" \
 "CMakeFiles/GraphColoring.dir/Node/Node.cpp.o" \
@@ -163,13 +188,14 @@ GraphColoring_OBJECTS = \
 # External object files for target GraphColoring
 GraphColoring_EXTERNAL_OBJECTS =
 
+GraphColoring: CMakeFiles/GraphColoring.dir/Construction_Heuristic/Dsatur.cpp.o
 GraphColoring: CMakeFiles/GraphColoring.dir/FileReader/FileReader.cpp.o
 GraphColoring: CMakeFiles/GraphColoring.dir/Graph/Graph.cpp.o
 GraphColoring: CMakeFiles/GraphColoring.dir/Node/Node.cpp.o
 GraphColoring: CMakeFiles/GraphColoring.dir/main.cpp.o
 GraphColoring: CMakeFiles/GraphColoring.dir/build.make
 GraphColoring: CMakeFiles/GraphColoring.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/thiagofsr/CLionProjects/GraphColoring/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable GraphColoring"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/thiagofsr/CLionProjects/GraphColoring/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable GraphColoring"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/GraphColoring.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -177,6 +203,7 @@ CMakeFiles/GraphColoring.dir/build: GraphColoring
 
 .PHONY : CMakeFiles/GraphColoring.dir/build
 
+CMakeFiles/GraphColoring.dir/requires: CMakeFiles/GraphColoring.dir/Construction_Heuristic/Dsatur.cpp.o.requires
 CMakeFiles/GraphColoring.dir/requires: CMakeFiles/GraphColoring.dir/FileReader/FileReader.cpp.o.requires
 CMakeFiles/GraphColoring.dir/requires: CMakeFiles/GraphColoring.dir/Graph/Graph.cpp.o.requires
 CMakeFiles/GraphColoring.dir/requires: CMakeFiles/GraphColoring.dir/Node/Node.cpp.o.requires

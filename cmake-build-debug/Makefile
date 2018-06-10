@@ -123,6 +123,33 @@ GraphColoring/fast:
 	$(MAKE) -f CMakeFiles/GraphColoring.dir/build.make CMakeFiles/GraphColoring.dir/build
 .PHONY : GraphColoring/fast
 
+Construction_Heuristic/Dsatur.o: Construction_Heuristic/Dsatur.cpp.o
+
+.PHONY : Construction_Heuristic/Dsatur.o
+
+# target to build an object file
+Construction_Heuristic/Dsatur.cpp.o:
+	$(MAKE) -f CMakeFiles/GraphColoring.dir/build.make CMakeFiles/GraphColoring.dir/Construction_Heuristic/Dsatur.cpp.o
+.PHONY : Construction_Heuristic/Dsatur.cpp.o
+
+Construction_Heuristic/Dsatur.i: Construction_Heuristic/Dsatur.cpp.i
+
+.PHONY : Construction_Heuristic/Dsatur.i
+
+# target to preprocess a source file
+Construction_Heuristic/Dsatur.cpp.i:
+	$(MAKE) -f CMakeFiles/GraphColoring.dir/build.make CMakeFiles/GraphColoring.dir/Construction_Heuristic/Dsatur.cpp.i
+.PHONY : Construction_Heuristic/Dsatur.cpp.i
+
+Construction_Heuristic/Dsatur.s: Construction_Heuristic/Dsatur.cpp.s
+
+.PHONY : Construction_Heuristic/Dsatur.s
+
+# target to generate assembly for a file
+Construction_Heuristic/Dsatur.cpp.s:
+	$(MAKE) -f CMakeFiles/GraphColoring.dir/build.make CMakeFiles/GraphColoring.dir/Construction_Heuristic/Dsatur.cpp.s
+.PHONY : Construction_Heuristic/Dsatur.cpp.s
+
 FileReader/FileReader.o: FileReader/FileReader.cpp.o
 
 .PHONY : FileReader/FileReader.o
@@ -240,6 +267,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... GraphColoring"
+	@echo "... Construction_Heuristic/Dsatur.o"
+	@echo "... Construction_Heuristic/Dsatur.i"
+	@echo "... Construction_Heuristic/Dsatur.s"
 	@echo "... FileReader/FileReader.o"
 	@echo "... FileReader/FileReader.i"
 	@echo "... FileReader/FileReader.s"

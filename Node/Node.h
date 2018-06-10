@@ -16,6 +16,7 @@ private:
     bool visited;
     int assignedColor;
     std::vector<Node*> neighbors;
+    int degreeSaturation;
 public:
     Node(const int& id);
 
@@ -25,6 +26,8 @@ public:
     bool beenVisited();
     void switchState();
     int getAssignedColor();
+    int getDegreeSat();
+    void incrementDegreeSat();
     void setAssignedColor(int color);
     void clearSettings();
 };

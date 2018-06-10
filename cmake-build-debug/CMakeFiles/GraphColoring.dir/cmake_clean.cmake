@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/GraphColoring.dir/Construction_Heuristic/Dsatur.cpp.o"
   "CMakeFiles/GraphColoring.dir/FileReader/FileReader.cpp.o"
   "CMakeFiles/GraphColoring.dir/Graph/Graph.cpp.o"
   "CMakeFiles/GraphColoring.dir/Node/Node.cpp.o"

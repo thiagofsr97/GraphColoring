@@ -44,6 +44,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/home/thiagofsr/CLionProjects/GraphColoring/Construction Heuristic"/>
 					<Add directory="/home/thiagofsr/CLionProjects/GraphColoring/FileReader"/>
 					<Add directory="/home/thiagofsr/CLionProjects/GraphColoring/Graph"/>
 					<Add directory="/home/thiagofsr/CLionProjects/GraphColoring/Node"/>
@@ -70,6 +71,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/home/thiagofsr/CLionProjects/GraphColoring/Construction Heuristic"/>
 					<Add directory="/home/thiagofsr/CLionProjects/GraphColoring/FileReader"/>
 					<Add directory="/home/thiagofsr/CLionProjects/GraphColoring/Graph"/>
 					<Add directory="/home/thiagofsr/CLionProjects/GraphColoring/Node"/>
@@ -90,6 +92,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/thiagofsr/CLionProjects/GraphColoring/Construction Heuristic/Dsatur.cpp">
+			<Option target="GraphColoring"/>
+		</Unit>
+		<Unit filename="/home/thiagofsr/CLionProjects/GraphColoring/Construction Heuristic/Dsatur.h">
+			<Option target="GraphColoring"/>
+		</Unit>
 		<Unit filename="/home/thiagofsr/CLionProjects/GraphColoring/FileReader/FileReader.cpp">
 			<Option target="GraphColoring"/>
 		</Unit>

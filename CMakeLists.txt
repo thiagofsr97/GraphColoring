@@ -3,11 +3,14 @@ project(GraphColoring)
 
 set(CMAKE_CXX_STANDARD 11)
 
+include_directories("Construction Heuristic")
 include_directories(FileReader)
 include_directories(Graph)
 include_directories(Node)
 
 add_executable(GraphColoring
+        "Construction Heuristic/Dsatur.cpp"
+        "Construction Heuristic/Dsatur.h"
         FileReader/FileReader.cpp
         FileReader/FileReader.h
         Graph/Graph.cpp
