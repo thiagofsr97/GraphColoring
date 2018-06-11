@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/thiagofsr/CLionProjects/GraphColoring/FileReader/FileReader.cpp" "/home/thiagofsr/CLionProjects/GraphColoring/cmake-build-debug/CMakeFiles/GraphColoring.dir/FileReader/FileReader.cpp.o"
   "/home/thiagofsr/CLionProjects/GraphColoring/Graph/Graph.cpp" "/home/thiagofsr/CLionProjects/GraphColoring/cmake-build-debug/CMakeFiles/GraphColoring.dir/Graph/Graph.cpp.o"
   "/home/thiagofsr/CLionProjects/GraphColoring/Node/Node.cpp" "/home/thiagofsr/CLionProjects/GraphColoring/cmake-build-debug/CMakeFiles/GraphColoring.dir/Node/Node.cpp.o"
+  "/home/thiagofsr/CLionProjects/GraphColoring/PermutationHeuristic/ColorClassHeuristic.cpp" "/home/thiagofsr/CLionProjects/GraphColoring/cmake-build-debug/CMakeFiles/GraphColoring.dir/PermutationHeuristic/ColorClassHeuristic.cpp.o"
   "/home/thiagofsr/CLionProjects/GraphColoring/main.cpp" "/home/thiagofsr/CLionProjects/GraphColoring/cmake-build-debug/CMakeFiles/GraphColoring.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

@@ -1,21 +1,22 @@
 #include <iostream>
 #include <FileReader.h>
 #include "Dsatur.h"
+#include "PermutationHeuristic/ColorClassHeuristic.h"
 
 
 int main() {
     FileReader fileReader("input.txt");
     Graph *graph = fileReader.createGraph();
-    //graph->showNeighbors();
+    //graph->showMatrix();
     Dsatur dsatur(graph);
     dsatur.ColorGraph();
-    std::cout << "Node greatest degree " << graph->sortByMaxDegreeNode()->getIdentifier()+1 << std::endl;
+    fileReader.WriteFirstResult(dsatur.getColorClass());
+
+    ColorClassHeuristic colorClassHeuristic(dsatur.getColorClass(),dsatur.getNumberOfColors(),500);
+    colorClassHeuristic.LocalSearch();
+    fileReader.WriteOptimalResult(colorClassHeuristic.getOptimalSolution());
 
 
-    for(auto node:graph->getAllNodes()){
-        std::cout << "Node " << node->getIdentifier()+1 << " Colored with: " << node->getAssignedColor()-1 << std::endl;
-    }
-    std::cout << "Number of colors used " << dsatur.getNumberOfColors() << std::endl;
 
     return 0;
 }

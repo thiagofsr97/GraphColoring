@@ -5,7 +5,7 @@
 #include <iostream>
 #include "Dsatur.h"
 
-    bool compare (Node* a, Node* b)
+bool compare (Node* a, Node* b)
     {
         if(a->getDegreeSat() == b->getDegreeSat()){
 //            if(a->getNeighbors().size() == b->getNeighbors().size()){
@@ -21,7 +21,6 @@
 void Dsatur::ColorGraph() {
     Node* current;
     std::vector<Node*> nodes = graph->getAllNodes();
-    //std::priority_queue<Node*,std::vector<Node*>,Compare> nodes;
     std::sort(nodes.begin(),nodes.end(),compare);
 
     while(!nodes.empty()){
@@ -49,6 +48,7 @@ Dsatur::Dsatur(Graph *graph) {
 }
 
 void Dsatur::assignColor(Node *node) {
+
     int color = 1;
     for(;color<=number_of_colors_used;color++){
         bool assignIt = true;
@@ -63,11 +63,44 @@ void Dsatur::assignColor(Node *node) {
     }
 
     node->setAssignedColor(color);
-    if(color > number_of_colors_used)
+
+    if(color > number_of_colors_used) {
         number_of_colors_used = color;
+        classes.push_back(std::vector<Node*>(1,node));
+    }else{
+        classes[color-1].push_back(node);
+    }
 
 }
 
 int Dsatur::getNumberOfColors() {
     return this->number_of_colors_used;
+}
+
+ColorClasses Dsatur::getColorClass() {
+    return this->classes;
+}
+
+void Dsatur::colorAssign(Node *node, int &number_of_colors_used,ColorClasses &alternativeSpace) {
+    int color = 1;
+    for(;color<=number_of_colors_used;color++){
+        bool assignIt = true;
+        for(auto neighbor:node->getNeighbors()){
+            if(neighbor->getAssignedColor()!=-1 && neighbor->getAssignedColor() == color){
+                assignIt = false;
+                break;
+            }
+        }
+        if(assignIt)
+            break;
+    }
+
+    node->setAssignedColor(color);
+    if(color > number_of_colors_used) {
+        number_of_colors_used = color;
+        alternativeSpace.push_back(std::vector<Node*>(1,node));
+    }else{
+        alternativeSpace[color-1].push_back(node);
+    }
+
 }

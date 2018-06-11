@@ -5,9 +5,7 @@
 #include <iostream>
 #include "Graph.h"
 
-bool compFunction(Node* a, Node* b){
-    return a->getNeighbors().size() >= b->getNeighbors().size();
-}
+
 
 void Graph::addNode(Node *node) {
     nodes.push_back(node);
@@ -103,12 +101,6 @@ void Graph::showNeighbors() {
 
 }
 
-Node* Graph::sortByMaxDegreeNode(){
-    std::vector<Node*> cp = nodes;
-    std::sort(cp.begin(),cp.end(),compFunction);
-
-    return cp[0];
-}
 
 
 

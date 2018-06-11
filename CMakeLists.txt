@@ -17,4 +17,4 @@ add_executable(GraphColoring
         Graph/Graph.h
         Node/Node.cpp
         Node/Node.h
-        main.cpp)
+        main.cpp  PermutationHeuristic/ColorClassHeuristic.cpp PermutationHeuristic/ColorClassHeuristic.h)

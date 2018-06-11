@@ -3,7 +3,7 @@
 //
 
 
-#include <sstream>
+
 #include "FileReader.h"
 
 FileReader::FileReader(const std::string &pathFile) {
@@ -60,8 +60,37 @@ Graph *FileReader::createGraph() {
 
       }
     }
+    inputFile->close();
 
     return graph;
 }
+
+void FileReader::WriteFirstResult(ColorClasses firstSolution) {
+    outputFile = new std::fstream("Results_First_Solution.txt",std::ios::out);
+    for(auto classes:firstSolution){
+        *outputFile << "Nodes colored with Color " + std::to_string (classes[0]->getAssignedColor()) + "\n";
+        for(auto node:classes){
+            *outputFile << "\tId: " +std::to_string(node->getIdentifier()+1) + "\n";
+        }
+    }
+    outputFile->close();
+    delete outputFile;
+}
+
+void FileReader::WriteOptimalResult(ColorClasses optimalSolution) {
+
+    outputFile = new std::fstream("Results_Optimal_Solution.txt",std::ios::out);
+    for(auto classes:optimalSolution){
+        *outputFile << "Nodes colored with Color " + std::to_string (classes[0]->getAssignedColor()) + "\n";
+        for(auto node:classes){
+            *outputFile << "\tId: " +std::to_string(node->getIdentifier()+1) + "\n";
+        }
+    }
+    outputFile->close();
+    delete outputFile;
+
+}
+
+
 
 

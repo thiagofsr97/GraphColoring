@@ -27,7 +27,7 @@ bool Node::beenVisited() {
 }
 
 void Node::switchState(){
-    this->visited = true;
+    this->visited?this->visited=false:this->visited=true;
 }
 
 int Node::getAssignedColor(){

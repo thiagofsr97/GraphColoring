@@ -8,16 +8,21 @@
 
 #include <fstream>
 #include <iostream>
+#include <Dsatur.h>
 #include "../Graph/Graph.h"
+#include <sstream>
 
 class FileReader {
 private:
     std::fstream *inputFile;
+    std::fstream *outputFile;
 
 public:
     FileReader(const std::string& pathFile);
     ~FileReader();
     Graph* createGraph();
+    void WriteFirstResult(ColorClasses firstSolution);
+    void WriteOptimalResult(ColorClasses optimalSolution);
 
 
 

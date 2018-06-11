@@ -116,6 +116,12 @@
 		<Unit filename="/home/thiagofsr/CLionProjects/GraphColoring/Node/Node.h">
 			<Option target="GraphColoring"/>
 		</Unit>
+		<Unit filename="/home/thiagofsr/CLionProjects/GraphColoring/PermutationHeuristic/ColorClassHeuristic.cpp">
+			<Option target="GraphColoring"/>
+		</Unit>
+		<Unit filename="/home/thiagofsr/CLionProjects/GraphColoring/PermutationHeuristic/ColorClassHeuristic.h">
+			<Option target="GraphColoring"/>
+		</Unit>
 		<Unit filename="/home/thiagofsr/CLionProjects/GraphColoring/main.cpp">
 			<Option target="GraphColoring"/>
 		</Unit>

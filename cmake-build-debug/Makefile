@@ -231,6 +231,33 @@ Node/Node.cpp.s:
 	$(MAKE) -f CMakeFiles/GraphColoring.dir/build.make CMakeFiles/GraphColoring.dir/Node/Node.cpp.s
 .PHONY : Node/Node.cpp.s
 
+PermutationHeuristic/ColorClassHeuristic.o: PermutationHeuristic/ColorClassHeuristic.cpp.o
+
+.PHONY : PermutationHeuristic/ColorClassHeuristic.o
+
+# target to build an object file
+PermutationHeuristic/ColorClassHeuristic.cpp.o:
+	$(MAKE) -f CMakeFiles/GraphColoring.dir/build.make CMakeFiles/GraphColoring.dir/PermutationHeuristic/ColorClassHeuristic.cpp.o
+.PHONY : PermutationHeuristic/ColorClassHeuristic.cpp.o
+
+PermutationHeuristic/ColorClassHeuristic.i: PermutationHeuristic/ColorClassHeuristic.cpp.i
+
+.PHONY : PermutationHeuristic/ColorClassHeuristic.i
+
+# target to preprocess a source file
+PermutationHeuristic/ColorClassHeuristic.cpp.i:
+	$(MAKE) -f CMakeFiles/GraphColoring.dir/build.make CMakeFiles/GraphColoring.dir/PermutationHeuristic/ColorClassHeuristic.cpp.i
+.PHONY : PermutationHeuristic/ColorClassHeuristic.cpp.i
+
+PermutationHeuristic/ColorClassHeuristic.s: PermutationHeuristic/ColorClassHeuristic.cpp.s
+
+.PHONY : PermutationHeuristic/ColorClassHeuristic.s
+
+# target to generate assembly for a file
+PermutationHeuristic/ColorClassHeuristic.cpp.s:
+	$(MAKE) -f CMakeFiles/GraphColoring.dir/build.make CMakeFiles/GraphColoring.dir/PermutationHeuristic/ColorClassHeuristic.cpp.s
+.PHONY : PermutationHeuristic/ColorClassHeuristic.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -279,6 +306,9 @@ help:
 	@echo "... Node/Node.o"
 	@echo "... Node/Node.i"
 	@echo "... Node/Node.s"
+	@echo "... PermutationHeuristic/ColorClassHeuristic.o"
+	@echo "... PermutationHeuristic/ColorClassHeuristic.i"
+	@echo "... PermutationHeuristic/ColorClassHeuristic.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

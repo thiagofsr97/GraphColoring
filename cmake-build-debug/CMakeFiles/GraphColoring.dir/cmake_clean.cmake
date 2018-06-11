@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/GraphColoring.dir/Graph/Graph.cpp.o"
   "CMakeFiles/GraphColoring.dir/Node/Node.cpp.o"
   "CMakeFiles/GraphColoring.dir/main.cpp.o"
+  "CMakeFiles/GraphColoring.dir/PermutationHeuristic/ColorClassHeuristic.cpp.o"
   "GraphColoring.pdb"
   "GraphColoring"
 )

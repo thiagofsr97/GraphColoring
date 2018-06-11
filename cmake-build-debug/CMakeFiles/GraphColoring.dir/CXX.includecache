@@ -7,6 +7,8 @@
 #IncludeRegexTransform: 
 
 ../Construction Heuristic/Dsatur.h
+stack
+-
 Node.h
 -
 queue
@@ -19,8 +21,12 @@ fstream
 -
 iostream
 -
+Dsatur.h
+-
 ../Graph/Graph.h
 ../Graph/Graph.h
+sstream
+-
 
 ../Graph/Graph.h
 vector
@@ -49,6 +55,8 @@ Dsatur.h
 /home/thiagofsr/CLionProjects/GraphColoring/Construction Heuristic/Dsatur.h
 
 /home/thiagofsr/CLionProjects/GraphColoring/Construction Heuristic/Dsatur.h
+stack
+-
 Node.h
 -
 queue
@@ -57,8 +65,6 @@ Graph.h
 -
 
 /home/thiagofsr/CLionProjects/GraphColoring/FileReader/FileReader.cpp
-sstream
--
 FileReader.h
 /home/thiagofsr/CLionProjects/GraphColoring/FileReader/FileReader.h
 
@@ -67,8 +73,12 @@ fstream
 -
 iostream
 -
+Dsatur.h
+-
 ../Graph/Graph.h
 /home/thiagofsr/CLionProjects/GraphColoring/Graph/Graph.h
+sstream
+-
 
 /home/thiagofsr/CLionProjects/GraphColoring/Graph/Graph.cpp
 iostream
@@ -102,6 +112,16 @@ climits
 vector
 -
 
+/home/thiagofsr/CLionProjects/GraphColoring/PermutationHeuristic/ColorClassHeuristic.cpp
+iostream
+-
+ColorClassHeuristic.h
+/home/thiagofsr/CLionProjects/GraphColoring/PermutationHeuristic/ColorClassHeuristic.h
+
+/home/thiagofsr/CLionProjects/GraphColoring/PermutationHeuristic/ColorClassHeuristic.h
+Dsatur.h
+-
+
 /home/thiagofsr/CLionProjects/GraphColoring/main.cpp
 iostream
 -
@@ -109,4 +129,6 @@ FileReader.h
 -
 Dsatur.h
 /home/thiagofsr/CLionProjects/GraphColoring/Dsatur.h
+PermutationHeuristic/ColorClassHeuristic.h
+/home/thiagofsr/CLionProjects/GraphColoring/PermutationHeuristic/ColorClassHeuristic.h
 
