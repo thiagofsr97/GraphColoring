@@ -81,9 +81,11 @@ ColorClasses Dsatur::getColorClass() {
     return this->classes;
 }
 
-void Dsatur::colorAssign(Node *node, int &number_of_colors_used,ColorClasses &alternativeSpace) {
-    int color = 1;
-    for(;color<=number_of_colors_used;color++){
+bool Dsatur::colorAssign(Node *node, ColorClasses &colorClasses) {
+
+    using Iter = ColorClasses::const_iterator;
+    for (Iter it = colorClasses.begin()+1; it!=colorClasses.end(); ++it) {
+        int color = (*it)[0]->getAssignedColor();
         bool assignIt = true;
         for(auto neighbor:node->getNeighbors()){
             if(neighbor->getAssignedColor()!=-1 && neighbor->getAssignedColor() == color){
@@ -91,16 +93,12 @@ void Dsatur::colorAssign(Node *node, int &number_of_colors_used,ColorClasses &al
                 break;
             }
         }
-        if(assignIt)
-            break;
+        if(assignIt) {
+            node->setAssignedColor(color);
+            return true;
+        }
     }
 
-    node->setAssignedColor(color);
-    if(color > number_of_colors_used) {
-        number_of_colors_used = color;
-        alternativeSpace.push_back(std::vector<Node*>(1,node));
-    }else{
-        alternativeSpace[color-1].push_back(node);
-    }
-
+    return false;
 }
+

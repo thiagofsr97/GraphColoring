@@ -17,6 +17,7 @@ private:
     int matrixSize;
     Node* maxDegree;
     int GetIndex(int u, int v);
+    int arraySize;
 public:
     Graph(int matrixSize,int arraySize);
     ~Graph();
@@ -28,6 +29,7 @@ public:
     int getWeigth(int u , int v);
     void showMatrix();
     void showNeighbors();
+    Graph* createCopy();
 
 
 };

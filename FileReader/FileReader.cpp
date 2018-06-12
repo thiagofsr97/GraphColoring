@@ -6,6 +6,9 @@
 
 #include "FileReader.h"
 
+bool vectorCompareByColor(std::vector<Node*> a, std::vector<Node*> b) {
+    return a[0]->getAssignedColor() < b[0]->getAssignedColor();
+}
 FileReader::FileReader(const std::string &pathFile) {
     this->inputFile = new std::fstream(pathFile,std::ios::in);
     if(!inputFile->is_open()){
@@ -67,6 +70,7 @@ Graph *FileReader::createGraph() {
 
 void FileReader::WriteFirstResult(ColorClasses firstSolution) {
     outputFile = new std::fstream("Results_First_Solution.txt",std::ios::out);
+    *outputFile << "Number of colors used: " << firstSolution.size() << " colors.\n\n";
     for(auto classes:firstSolution){
         *outputFile << "Nodes colored with Color " + std::to_string (classes[0]->getAssignedColor()) + "\n";
         for(auto node:classes){
@@ -79,7 +83,9 @@ void FileReader::WriteFirstResult(ColorClasses firstSolution) {
 
 void FileReader::WriteOptimalResult(ColorClasses optimalSolution) {
 
+    std::sort(optimalSolution.begin(),optimalSolution.end(),vectorCompareByColor);
     outputFile = new std::fstream("Results_Optimal_Solution.txt",std::ios::out);
+    *outputFile << "Number of colors used " << optimalSolution.size() << " colors.\n\n";
     for(auto classes:optimalSolution){
         *outputFile << "Nodes colored with Color " + std::to_string (classes[0]->getAssignedColor()) + "\n";
         for(auto node:classes){

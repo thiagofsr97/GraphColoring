@@ -21,7 +21,7 @@ private:
 public:
 
     void assignColor(Node* node);
-    static void colorAssign(Node* node,int &number_of_colors_used,ColorClasses &alternativeSpace);
+    static bool colorAssign(Node *node, ColorClasses& colorClasses);
     Dsatur(Graph *graph);
     ColorClasses getColorClass();
     int getNumberOfColors();

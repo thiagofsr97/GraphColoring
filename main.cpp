@@ -7,13 +7,11 @@
 int main() {
     FileReader fileReader("input.txt");
     Graph *graph = fileReader.createGraph();
-    //graph->showMatrix();
     Dsatur dsatur(graph);
     dsatur.ColorGraph();
+    ColorClassHeuristic colorClassHeuristic(graph,dsatur.getColorClass(),dsatur.getNumberOfColors(),1000,ByFullColorTest);
+    colorClassHeuristic.dropBucket();
     fileReader.WriteFirstResult(dsatur.getColorClass());
-
-    ColorClassHeuristic colorClassHeuristic(dsatur.getColorClass(),dsatur.getNumberOfColors(),500);
-    colorClassHeuristic.LocalSearch();
     fileReader.WriteOptimalResult(colorClassHeuristic.getOptimalSolution());
 
 

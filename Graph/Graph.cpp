@@ -28,12 +28,9 @@ int Graph::GetIndex( int u, int v) {
 }
 
 Node *Graph::getNode(int identifier) {
-    for(auto v: nodes){
-        if(v->getIdentifier() == identifier){
-            return v;
-        }
-    }
+    if(identifier > nodes.size() || identifier < 0)
     return nullptr;
+    return nodes[identifier];
 }
 
 std::vector<Node*> Graph::getAllNodes() {
@@ -63,15 +60,16 @@ Graph::Graph(int matrixSize, int arraySize) {
     this->matrixSize = matrixSize;
     this->array = new int[arraySize]();
     this->maxDegree = nullptr;
+    this->arraySize = arraySize;
 
 }
 
 Graph::~Graph() {
     //dealing with deallocationf of memorys
     delete[] this->array;
-    for(auto node:nodes){
-        delete node;
-    }
+//    for(auto node:nodes){
+//        delete node;
+//    }
 };
 
 
@@ -100,6 +98,21 @@ void Graph::showNeighbors() {
     }
 
 }
+
+Graph *Graph::createCopy() {
+    Graph* copy = new Graph(this->matrixSize,this->arraySize);
+    for(auto c:nodes){
+        copy->addNode(new Node(c->getIdentifier()));
+    }
+    for(auto c:nodes){
+        for(auto neighbors:c->getNeighbors()){
+            copy->getNode(c->getIdentifier())->addNeighbor(copy->getNode(neighbors->getIdentifier()));
+        }
+    }
+
+    return copy;
+}
+
 
 
 
