@@ -5,11 +5,17 @@
 #include <iostream>
 #include "ColorClassHeuristic.h"
 
+/*
+ * Compare function used to sort a list of buckets.
+ *
+ */
 
 bool vectorCompare(std::vector<Node*> a,std::vector<Node*> b) {
     return a.size() < b.size();
 }
-ColorClassHeuristic::ColorClassHeuristic(Graph* graph,ColorClasses solutionSpace, int k_value, int numberOfAttemps,Heuristic heuristic) {
+
+
+ColorClassHeuristic::ColorClassHeuristic(Graph* graph,ColorClasses solutionSpace, int k_value, int numberOfAttemps, Heuristic heuristic) {
     this->graph = graph;
     this->solutionSpace = createCopy(solutionSpace);
     this->k_value = k_value;
@@ -22,6 +28,7 @@ ColorClassHeuristic::ColorClassHeuristic(Graph* graph,ColorClasses solutionSpace
 ColorClasses ColorClassHeuristic::getOptimalSolution() {
     return this->optimalSolutionSpace;
 }
+
 
 ColorClasses ColorClassHeuristic::createCopy(ColorClasses &colorClasses) {
     Graph *copy = this->graph->createCopy();

@@ -11,13 +11,11 @@ enum Heuristic {ByAttempts,ByFullColorTest};
 
 class ColorClassHeuristic {
 
-
 private:
     Graph* graph;
     ColorClasses solutionSpace;
     ColorClasses optimalSolutionSpace;
     int k_value;
-
     int numberOfAttemps;
 
     Heuristic  heuristic;
@@ -30,7 +28,7 @@ private:
 public:
     ColorClasses getOptimalSolution();
     void dropBucket();
-    ColorClassHeuristic(Graph*,ColorClasses solutionSpace,int k_value,int numberOfAttemps,Heuristic heuristic);
+    ColorClassHeuristic(Graph*,ColorClasses solutionSpace,int k_value,int numberOfAttemps, Heuristic heuristic);
 
 
 

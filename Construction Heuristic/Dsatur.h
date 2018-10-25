@@ -12,6 +12,11 @@
 #include <queue>
 #include <Graph.h>
 
+/*
+ * ColorClasses represents a bi-dimensional vector of Nodes.
+ * It is used to represent the solution space.
+ * The so called Buckets.
+ */
 typedef std::vector<std::vector<Node*>> ColorClasses;
 class Dsatur {
 private:
