@@ -28,8 +28,13 @@ public:
     Dsatur(Graph *graph);
     void assignColor(Node* node);
     static bool colorAssign(Node *node, ColorClasses& colorClasses);
-    ColorClasses getColorClass();
-    int getNumberOfColors();
+    ColorClasses getColorClass() {
+        return this->classes;
+    }
+
+    int getNumberOfColors() {
+        return this->number_of_colors_used;
+    }
     void ColorGraph();
 
 };

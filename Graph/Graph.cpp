@@ -5,12 +5,6 @@
 #include <iostream>
 #include "Graph.h"
 
-
-
-void Graph::addNode(Node *node) {
-    nodes.push_back(node);
-}
-
 int Graph::GetIndex( int u, int v) {
     int offset  = 0;
     int a,b;
@@ -33,9 +27,7 @@ Node *Graph::getNode(int identifier) {
     return nodes[identifier];
 }
 
-std::vector<Node*> Graph::getAllNodes() {
-    return this->nodes;
-}
+
 
 
 
@@ -48,13 +40,8 @@ int Graph::getWeigth( int u,  int v) {
 }
 
 
-void Graph::setWeightMatrix( int u, int v,int weight) {
-    int index = GetIndex(u,v);
-    array[index] = weight;
-}
-void Graph::addWeightMatrix(int i, int weight){
-    array[i] = weight;
-}
+
+
 
 Graph::Graph(int matrixSize, int arraySize) {
     this->matrixSize = matrixSize;

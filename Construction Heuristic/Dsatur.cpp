@@ -112,13 +112,9 @@ void Dsatur::assignColor(Node *node) {
 
 }
 
-int Dsatur::getNumberOfColors() {
-    return this->number_of_colors_used;
-}
 
-ColorClasses Dsatur::getColorClass() {
-    return this->classes;
-}
+
+
 
 /*
  * This function is defined as static.
