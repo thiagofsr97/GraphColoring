@@ -68,11 +68,7 @@ void Dsatur::ColorGraph() {
  * Dsatur Class Constructor
  */
 
-Dsatur::Dsatur(Graph *graph) {
-    this->graph = graph;
-    this->number_of_colors_used = 0;
-
-}
+Dsatur::Dsatur(Graph *graph):graph(graph), number_of_colors_used(0){}
 
 
 /*

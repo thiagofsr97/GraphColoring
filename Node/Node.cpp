@@ -1,13 +1,7 @@
 #include <iostream>
 #include "Node.h"
 
-Node::Node( int const &id) {
-    this->identifier  = id;
-    this->visited = false;
-    this->assignedColor = -1;
-    this->degreeSaturation = 0;
-
-}
+Node::Node( int const &id):identifier(id), visited(false), assignedColor(-1), degreeSaturation(0) {}
 
 
 

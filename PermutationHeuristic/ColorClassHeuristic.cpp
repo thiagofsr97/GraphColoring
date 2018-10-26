@@ -144,9 +144,7 @@ void ColorClassHeuristic::MoveColorClass(ColorClasses &S, ColorClasses &T, int i
 
 }
 
-ColorClassHeuristic::ColorClassHeuristic(Graph *graph, ColorClasses solutionSpace, int k_value) {
-    this->graph = graph;
-    this->k_value = k_value;
+ColorClassHeuristic::ColorClassHeuristic(Graph *graph, ColorClasses solutionSpace, int k_value):graph(graph), k_value(k_value) {
     this->solutionSpace = createCopy(solutionSpace);
 
 }

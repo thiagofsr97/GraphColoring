@@ -43,20 +43,13 @@ int Graph::getWeigth( int u,  int v) {
 
 
 
-Graph::Graph(int matrixSize, int arraySize) {
-    this->matrixSize = matrixSize;
-    this->array = new int[arraySize]();
-    this->maxDegree = nullptr;
-    this->arraySize = arraySize;
-
+Graph::Graph(int matrixSize, int arraySize):matrixSize(matrixSize), maxDegree(nullptr), arraySize(arraySize){
+        this->array = new int[this->arraySize]();
 }
 
 Graph::~Graph() {
-    //dealing with deallocationf of memorys
     delete[] this->array;
-//    for(auto node:nodes){
-//        delete node;
-//    }
+
 };
 
 
