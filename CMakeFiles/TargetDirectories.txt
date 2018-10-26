@@ -1,3 +1,0 @@
-/home/thiagofsr/Hacking/UFPB/GraphColoring/CMakeFiles/rebuild_cache.dir
-/home/thiagofsr/Hacking/UFPB/GraphColoring/CMakeFiles/edit_cache.dir
-/home/thiagofsr/Hacking/UFPB/GraphColoring/CMakeFiles/GraphColoring.dir

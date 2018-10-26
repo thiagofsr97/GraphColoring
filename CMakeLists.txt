@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.12)
 project(GraphColoring)
 
 set(CMAKE_CXX_STANDARD 11)
@@ -7,6 +7,7 @@ include_directories("Construction Heuristic")
 include_directories(FileReader)
 include_directories(Graph)
 include_directories(Node)
+include_directories(PermutationHeuristic)
 
 add_executable(GraphColoring
         "Construction Heuristic/Dsatur.cpp"
@@ -17,4 +18,6 @@ add_executable(GraphColoring
         Graph/Graph.h
         Node/Node.cpp
         Node/Node.h
-        main.cpp  PermutationHeuristic/ColorClassHeuristic.cpp PermutationHeuristic/ColorClassHeuristic.h)
+        PermutationHeuristic/ColorClassHeuristic.cpp
+        PermutationHeuristic/ColorClassHeuristic.h
+        main.cpp PermutationHeuristic/AttemptHeuristic.h PermutationHeuristic/AttemptHeuristic.cpp PermutationHeuristic/AttemptHeuristic.h PermutationHeuristic/ColorTestHeuristic.cpp PermutationHeuristic/ColorTestHeuristic.h)

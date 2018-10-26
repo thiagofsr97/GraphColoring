@@ -14,14 +14,14 @@ bool vectorCompare(std::vector<Node*> a,std::vector<Node*> b) {
     return a.size() < b.size();
 }
 
-
-ColorClassHeuristic::ColorClassHeuristic(Graph* graph,ColorClasses solutionSpace, int k_value, int numberOfAttemps, Heuristic heuristic) {
-    this->graph = graph;
-    this->solutionSpace = createCopy(solutionSpace);
-    this->k_value = k_value;
-    this->numberOfAttemps = numberOfAttemps;
-    this->heuristic = heuristic;
-}
+//
+//ColorClassHeuristic::ColorClassHeuristic(Graph* graph,ColorClasses solutionSpace, int k_value, int numberOfAttemps, Heuristic heuristic) {
+//    this->graph = graph;
+//    this->solutionSpace = createCopy(solutionSpace);
+//    this->k_value = k_value;
+//    this->numberOfAttemps = numberOfAttemps;
+//    this->heuristic = heuristic;
+//}
 
 
 
@@ -31,7 +31,7 @@ ColorClasses ColorClassHeuristic::getOptimalSolution() {
 
 
 ColorClasses ColorClassHeuristic::createCopy(ColorClasses &colorClasses) {
-    Graph *copy = this->graph->createCopy();
+    Graph *copy = graph->createCopy();
     ColorClasses copyClass;
     for (auto classes:colorClasses) {
         copyClass.push_back(std::vector<Node *>());
@@ -87,53 +87,32 @@ void ColorClassHeuristic::LocalSearch(ColorClasses& S, ColorClasses& T) {
         S.push_back(T[0]);
     }
 }
-
-void ColorClassHeuristic::dropBucket() {
-    ColorClasses S = createCopy(solutionSpace);
-
-    switch (heuristic){
-        case ByAttempts:
-            while(numberOfAttemps--) {
-                ColorClasses T = S;
-                MoveColorClass(S, T);
-                LocalSearch(S, T);
-                if (S.size() < k_value) {
-                    std::cout << "Improvement has happened. \n";
-                    k_value = S.size();
-                    saveSolution(optimalSolutionSpace, S);
-                }
-            }
-            break;
-        case ByFullColorTest:
-            int number_of_collors_tested = 0;
-            ColorClasses backup;
-
-            while(number_of_collors_tested< S.size()){
-                clearColorClass(backup);
-                backup = createCopy(S);
-                ColorClasses T = S;
-                MoveColorClass(S, T,number_of_collors_tested);
-                LocalSearch(S, T);
-                if (S.size() < k_value) {
-                    std::cout << "Improvement has happened. \n";
-                    k_value = S.size();
-                    number_of_collors_tested = 0;
-                    saveSolution(optimalSolutionSpace, S);
-                }
-                else{
-                    clearColorClass(S);
-                    S = createCopy(backup);
-                    number_of_collors_tested++;
-                }
-            }
-            break;
-
-    }
+//
+//void ColorClassHeuristic::dropBucket() {
+//    ColorClasses S = createCopy(solutionSpace);
+//
+//    switch (heuristic){
+//        case ByAttempts:
+//            while(numberOfAttemps--) {
+//                ColorClasses T = S;
+//                MoveColorClass(S, T);
+//                LocalSearch(S, T);
+//                if (S.size() < k_value) {
+//                    std::cout << "Improvement has happened. Now using " << k_value << " colors.\n";
+//                    k_value = S.size();
+//                    saveSolution(optimalSolutionSpace, S);
+//                }
+//            }
+//            break;
+//        case ByFullColorTest:
+//
+//            break;
+//
+//    }
 
 
 
 
-}
 void ColorClassHeuristic::MoveColorClass(ColorClasses &S, ColorClasses& T) {
     std::random_shuffle(T.begin(),T.end());
     while(T.size() > 1){
@@ -165,4 +144,9 @@ void ColorClassHeuristic::MoveColorClass(ColorClasses &S, ColorClasses &T, int i
 
 }
 
+ColorClassHeuristic::ColorClassHeuristic(Graph *graph, ColorClasses solutionSpace, int k_value) {
+    this->graph = graph;
+    this->k_value = k_value;
+    this->solutionSpace = createCopy(solutionSpace);
 
+}

@@ -19,7 +19,6 @@ private:
     int degreeSaturation;
 public:
     Node(const int& id);
-
     void addNeighbor(Node* node);
     std::vector<Node*> getNeighbors();
     int getIdentifier();

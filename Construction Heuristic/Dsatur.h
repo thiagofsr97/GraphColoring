@@ -25,9 +25,9 @@ private:
     ColorClasses classes;
 public:
 
+    Dsatur(Graph *graph);
     void assignColor(Node* node);
     static bool colorAssign(Node *node, ColorClasses& colorClasses);
-    Dsatur(Graph *graph);
     ColorClasses getColorClass();
     int getNumberOfColors();
     void ColorGraph();

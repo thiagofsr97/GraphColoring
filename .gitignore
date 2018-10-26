@@ -1,0 +1,7 @@
+.idea/
+CMakeCache.txt
+cmake_install.cmake
+GraphColoring
+GraphColoring.cbp
+MakeFile
+CMakeFiles/

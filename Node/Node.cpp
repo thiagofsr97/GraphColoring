@@ -31,7 +31,7 @@ void Node::switchState(){
 }
 
 int Node::getAssignedColor(){
-    return this->assignedColor;
+       return this->assignedColor;
 }
 
 void Node::setAssignedColor(int color) {
@@ -53,7 +53,6 @@ void Node::incrementDegreeSat() {
 int Node::getDegreeSat() {
     return this->degreeSaturation;
 }
-
 
 
 
